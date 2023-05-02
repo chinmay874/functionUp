@@ -1,9 +1,9 @@
 import './App.css';
-import {Filepicker} from './component/useRef'
+import Imageslide from './component/useEffect';
 function App() {
   return (
     <div className="App">
-      <Filepicker/>
+      <Imageslide/>
     </div>
   );
 }
