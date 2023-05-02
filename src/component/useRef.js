@@ -9,7 +9,7 @@ export function Filepicker(){
         
     return(
         <div>
-            <input type="file" ref={fileselector} style={{display:"none"}}/>
+            <input type="file" ref={fileselector} style={{}}/>
             <button style={{marginTop:'100px',height:'40px', width:'250px'}} onClick={handleFile}>Pick the file</button>
         </div>
     )
