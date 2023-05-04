@@ -1,0 +1,12 @@
+#div1{
+    border: 1px solid red;
+    height: 250px;
+    width: 250px;
+    align-items: center;
+}
+#img1{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
