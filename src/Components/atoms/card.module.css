@@ -1,0 +1,28 @@
+.Card{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    min-width: 20%;
+    
+    box-shadow: 10px 5px 10px 0px;
+    border: 0.5px solid white;
+    border-radius: 15px;
+    background-color: rgb(182, 182, 214);
+    align-items: center;
+    /* margin: 3rem 1rem 3rem 1rem; */
+    margin: 7px 7px;
+    
+    
+}
+.Card .img{
+    height: 140px;
+    width: 140px;
+    border: 3px solid rgb(78, 76, 76);
+    /* border-color: rgb(244, 244, 250); */
+    border-radius: 50%;
+    margin: 20px;
+}
+.Card .heading{
+    margin: 0px;
+    padding: 10px;
+}

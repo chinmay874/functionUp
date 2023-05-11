@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 50vh;
+  width: 80vw;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  justify-content: space-around;
+  align-items: center;
+  border: .3vh solid black;
+  border-radius: 20px;
+}
