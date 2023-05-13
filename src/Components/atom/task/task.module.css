@@ -1,0 +1,8 @@
+.task{
+   
+    max-width: 80%;
+    font-size: 100%;
+    color:white;
+    font-family: monospace;
+    word-break: break-all;
+}

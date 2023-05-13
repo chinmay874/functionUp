@@ -1,0 +1,46 @@
+.todo {
+    border: 2px solid rgb(187, 0, 255);
+    border-radius: 3%;
+    box-shadow: 0px 0px 15px grey;
+    width: 350px;
+    max-width: 360px;
+    min-height: 450px;
+    display: flex;
+    gap:15px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding:2px 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+.h1 {
+    font-family: monospace;
+    color: white;
+}
+
+.todo:hover {
+    box-shadow: 2px 2px 25px grey;
+
+}
+
+.task {
+    /* background-color: aliceblue; */
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+
+.inputEnter {
+    outline: none;
+    font-weight: bold;
+    border: 0;
+    text-align: center;
+    width: 80%;
+    min-height: 35px;
+}
