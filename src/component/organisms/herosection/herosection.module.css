@@ -1,8 +1,6 @@
 .herosec {
   box-shadow: 0.3rem 0.3rem 0.5rem rgb(0, 0, 0);
-  
   display: flex;
-
   width: 100vw;
   height: 500px;
 }
@@ -16,14 +14,11 @@
   height:3em;
   border-radius: 30%;
   font-size: 1.12em;
-
-
 }
 .herosec img {
   height: 100%;
   width: 50%;
 }
-
 .head {
   display: flex;
   flex-direction: column;

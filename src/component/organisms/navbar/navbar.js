@@ -20,24 +20,11 @@ export function Navbar() {
                <li><a href="hclick">VIDEOS</a></li>
                <li><a href="hclick">CONTACT</a></li>
                <li><button>Login</button></li>
-
-
             </ul>
             <button onClick={()=>{
                   setListclass(!listclass);
             }}className={styles.burger}>{!listclass?<GiHamburgerMenu />:<VscError/>}</button>
-
-
-
          </div>
-
-
-
-
       </Fragment>
-
-
    )
-
-
 }
