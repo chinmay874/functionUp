@@ -1,0 +1,77 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(235, 100%, 74%, 1);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: hsla(61, 142, 235);
+}
+.container{
+    /* justify-content: center;
+    align-items: center; */
+    border: .2vh solid black;
+    border-radius: 2vh;
+    height: 60vh;
+    width: 25vw;
+    padding:5vh;
+    background-color: hsla(337, 100%, 84%, 1);
+    box-shadow: 5px 5px 15px 5px;
+}
+.question{
+    
+    border: 0.05vh solid rgb(141, 20, 20);
+    border-radius: 2vh;
+    height: 30%;
+    width: 100%;
+    background-color: hsla(235, 100%, 74%, 1);
+    font-size: 1.3rem;
+    justify-content: center;
+    align-content: center;
+}
+.option{
+    border: .05vh solid rgb(141, 20, 20);
+    border-radius: 2vh;
+    height: 50%;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    background-color: hsla(235, 100%, 74%, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.btn{
+    border: 0.05vh solid rgb(141, 20, 20);
+    height: 7vh;
+    width: 15vw;
+    border-radius: 2vh;
+    background-color: hsla(235, 100%, 74%, 1);
+    font-size: 2rem;
+}
+.btn:hover{
+    background-color: rgb(61, 142, 235);
+    box-shadow:  5px 5px 15px 5px;
+}
+.optionbtn{
+    height: 15%;
+    width: 80%;
+    border: 0.05vh solid black;
+    display: flex;
+    justify-content: left;
+    border-radius: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+.optionbtn:hover{
+    background-color: rgb(61, 142, 235);
+    box-shadow:  5px 5px 15px 5px;
+}
