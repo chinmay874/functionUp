@@ -1,0 +1,12 @@
+.result{
+    height: 60vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+.name{
+    font-weight: bolder;
+    color: blue;
+    font-style: italic;
+}

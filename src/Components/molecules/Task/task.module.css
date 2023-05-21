@@ -1,0 +1,13 @@
+.result{
+    display: flex;
+    font-size: 1.4rem;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.selectans{
+    background-color: hsla(337, 100%, 84%, 1);
+    color: white;
+    box-shadow: 3px 3px 4px 1px rgb(78,69,78);
+}

@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Btn from "../../atoms/Button/button";
 import {quiz} from "../../atoms/Question.js/questions";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+import styles from './task.module.css'
+// import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 const Task=(props)=>{
     const[currentquestion, setcurrentquestion]=useState(0);         //hold current question index value
@@ -15,40 +16,42 @@ const Task=(props)=>{
         checkanswer();                            //move to next question
         if(currentquestion<quiz.length-1){
             setcurrentquestion(currentquestion + 1);
-            setselectanswer(0);
-        }
-        else{
-            
-        }
+            setselectanswer('');
+        } 
     }
 
     const checkanswer=()=>{
-        if(quiz[currentquestion].key &&quiz[currentquestion].choices[selectanswer]===quiz[currentquestion].correctAnswer){
-            // if(quiz[currentquestion].key){
-                setscore(score+2);
-               
-            // }
+        
+        if(quiz[currentquestion].key && quiz[currentquestion].choices[selectanswer]===quiz[currentquestion].correctAnswer){
+            setscore(score+2);
     }
-    quiz[currentquestion].key=false
-}
+    quiz[currentquestion].key=false;
+    }
 
 useEffect(() => {
-    const id = setTimeout(() => {
+    const interval = setTimeout(() => {
         setSec(sec - 1);
-        if (sec == 1) {
+        if (sec === 1) {
             setMin(min - 1)
-            if (min == 0) {
-                setcurrentquestion(11)
+            if (min === 0) {
+                onsubmit();
             }
             setSec(60)
         }
     }, 1000)
-
     return () => {
-        clearTimeout(id);
+        clearTimeout(interval);
     }
 
-}, [sec]);
+});
+function onsubmit(){
+    // alert("Time Over")
+    if(quiz[currentquestion].key &&quiz[currentquestion].choices[selectanswer]===quiz[currentquestion].correctAnswer){
+            setscore(score+2);
+}
+quiz[currentquestion].key=false;
+    setcurrentquestion(currentquestion + 1);
+}
 
 
 
@@ -56,7 +59,10 @@ useEffect(() => {
     return(
         <>
         {/* <p className={props.title}>Quiz App</p> */}
-        <div className={props.container}>
+        <div className={props.container}>{
+          ((currentquestion<10))?
+       (
+        <> 
         <p>{min}:{sec} min left</p>
             <div className={props.question}>
                 <span id="question-no">{currentquestion+1}.</span>
@@ -70,7 +76,7 @@ useEffect(() => {
                 {quiz[currentquestion].choices.map((choices,i)=>{
                     return(
                         <button 
-                        className={props.optionbtn }       
+                        className={props.optionbtn}        
                         key={i} onClick={()=>setselectanswer(i)}>
                             {choices}
                         </button>
@@ -78,9 +84,12 @@ useEffect(() => {
                 })}
             </div>
             {
-                (currentquestion<9)?(<Btn btn={props.btn} onClick={onClickNext} btn_name="Next"/>) :(<Btn btn={props.btn} onClick={onClickNext} btn_name="Submit"/>)
+                (currentquestion<9)?(<Btn btn={props.btn} onClick={onClickNext} btn_name="Next"/>) :(<Btn btn={props.btn} onClick={onsubmit} btn_name="Submit"></Btn>)
             }
-            {/* <Btn btn={props.btn} onClick={onClickNext} btn_name="Next"/> */}
+            </>
+       ):(<div className={styles.result}>Hi User, Your score is {score} out of {quiz.length*2}. You Get {(score/(quiz.length*2)*100)} percentage.
+       </div>)
+}
         </div>
         </>
     )
