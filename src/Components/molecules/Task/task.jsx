@@ -9,7 +9,7 @@ const Task=(props)=>{
     const[selectanswer,setselectanswer]=useState('');
     const[score,setscore]=useState(0);
     const[sec,setSec]=useState(60);
-    const[min,setMin]=useState(9);
+    const[min,setMin]=useState(4);
 
 
     const onClickNext=()=>{     
@@ -34,7 +34,7 @@ useEffect(() => {
         if (sec === 1) {
             setMin(min - 1)
             if (min === 0) {
-                onsubmit();
+                setcurrentquestion(11)
             }
             setSec(60)
         }
