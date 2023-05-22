@@ -34,7 +34,7 @@ useEffect(() => {
         if (sec === 1) {
             setMin(min - 1)
             if (min === 0) {
-                setcurrentquestion(11)
+                setcurrentquestion(10)
             }
             setSec(60)
         }
@@ -76,7 +76,7 @@ quiz[currentquestion].key=false;
                 {quiz[currentquestion].choices.map((choices,i)=>{
                     return(
                         <button 
-                        className={props.optionbtn}        
+                        className={`${props.optionbtn} ${selectanswer === i ? styles.selectans : ''}`}        
                         key={i} onClick={()=>setselectanswer(i)}>
                             {choices}
                         </button>
