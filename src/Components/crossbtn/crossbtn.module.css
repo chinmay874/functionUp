@@ -1,0 +1,8 @@
+.div1{
+    display: flex;
+    margin: 10px;
+    width: 20vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
