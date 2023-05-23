@@ -1,20 +1,20 @@
 .Search-container{
-    width: 70vw;
+    width: 30vw;
     height: 50vh;
     
 }
 .search{
-    width: 70vw;
+    width: 30vw;
 
 }
 .search input{
-    width: 64vw;
+    width: 30vw;
     padding: 10px 25px;
     font-size: 18px;
 }
 .search-result{
-    width: 70vw;
-    height:40vw;
+    width: 33vw;
+    height:20vw;
     display: flex;
     flex-direction: column;
     
@@ -24,7 +24,7 @@
     overflow-y: auto;
 }
 .search-result div{
-    width: 64w;
+    width: 30w;
     padding: 10px 25px;
     background-color: white;
 }

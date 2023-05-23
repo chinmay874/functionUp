@@ -3,6 +3,7 @@ import './Search.css';
 export function Search(){
     const[data,setData]=useState([]);
     const [filterData,setFilterData]=useState([]);
+    const [searchvalue, setsearchvalue]=useState('');
 
     useEffect(()=>{
         fetch('http://cdn-api.co-vin.in/api/v2/admin/location/states')
@@ -16,6 +17,7 @@ export function Search(){
 
     
     const handleFilter=(value)=>{
+        setsearchvalue(value);
         const response= filterData.filter(f => (f.state_name.toLowerCase().includes(value)))
         setData(response);
         console.log(data)
@@ -25,12 +27,15 @@ export function Search(){
         <div className="search">
             <input type="text" placeholder="Search here..." onChange={e =>handleFilter(e.target.value)}/>
         </div>
-        <div className='search-result'>
+        {
+            (searchvalue)?(<div className='search-result'>
             {
             data.map((d,i)=>( 
                 <div key={i}>{d.state_name}</div>
             ))}
-        </div>
+        </div>):("")
+        }
+        
     </div>
     )
 }
